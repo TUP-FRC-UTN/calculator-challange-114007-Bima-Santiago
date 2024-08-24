@@ -1,0 +1,17 @@
+<div>
+  <div>
+    <app-valor (valorEnviado)="leerValor1($event)"></app-valor>
+    <app-valor (valorEnviado)="leerValor2($event)"></app-valor>
+  </div>
+  <div>
+    <app-resultado [resultado]="resultado"></app-resultado>
+  </div>
+  <div>
+    <button (click)="suma()"> + </button>
+    <button (click)="resta()"> - </button>
+    <button (click)="potencia()"> ^ </button>
+    <button (click)="multiplicacion()"> * </button>
+    <button (click)="division()"> / </button>
+    <button (click)="borrar()"> CE </button>
+  </div>
+</div>
