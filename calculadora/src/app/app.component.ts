@@ -32,5 +32,7 @@ export class AppComponent {
   division = () => this.resultado = this.valor1 / this.valor2;
   borrar = () => {
     this.resultado = 0;
+    this.valor1 = 0;
+    this.valor2 = 0;
   }
 }

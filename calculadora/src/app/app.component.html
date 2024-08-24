@@ -1,17 +1,24 @@
-<div>
+<div id="contenedor">
+  <h1>Calculadora</h1>
   <div>
-    <app-valor (valorEnviado)="leerValor1($event)"></app-valor>
-    <app-valor (valorEnviado)="leerValor2($event)"></app-valor>
+    <p>Valor 1</p>
+    <app-valor (valorEnviado)="leerValor1($event)" [valor]="valor1"></app-valor>
+    <p>Valor 2</p>
+    <app-valor (valorEnviado)="leerValor2($event)" [valor]="valor2"></app-valor>
   </div>
   <div>
     <app-resultado [resultado]="resultado"></app-resultado>
   </div>
-  <div>
-    <button (click)="suma()"> + </button>
-    <button (click)="resta()"> - </button>
-    <button (click)="potencia()"> ^ </button>
-    <button (click)="multiplicacion()"> * </button>
-    <button (click)="division()"> / </button>
-    <button (click)="borrar()"> CE </button>
+  <div class="buttons">
+    <div>
+      <button (click)="suma()"> + </button>
+      <button (click)="resta()"> - </button>
+      <button (click)="potencia()"> ^ </button>
+    </div>
+    <div>
+      <button (click)="multiplicacion()"> * </button>
+      <button (click)="division()"> / </button>
+      <button (click)="borrar()"> CE </button>
+    </div>
   </div>
 </div>

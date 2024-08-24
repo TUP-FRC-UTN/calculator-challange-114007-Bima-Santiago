@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Input} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './valor.component.css'
 })
 export class ValorComponent {
-  valor?:number;
+  @Input() valor?:number;
   @Output() valorEnviado = new EventEmitter<number>();
 
   enviarValor() {
